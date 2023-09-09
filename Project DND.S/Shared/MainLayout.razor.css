@@ -1,7 +1,13 @@
 .page {
     position: relative;
-    display: flex;
+    
     flex-direction: column;
+    display: grid;
+    grid-template-rows: 10vh 1fr;
+    grid-template-columns: 450px 1fr;
+   /* grid-template-areas:
+            "header" "header"
+    "build" "sheet";*/
 }
 
 main {

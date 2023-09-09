@@ -7,4 +7,12 @@
     <RootNamespace>Project_DND.S</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\CharacterSheet.pdf" />
+  </ItemGroup>
+
 </Project>
