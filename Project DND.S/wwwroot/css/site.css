@@ -5,7 +5,7 @@ html, body {
 }
 body{
    overflow: hidden;
-    background: #4f5050;
+    background: rgb(23,26,30);
 }
 header{
     /*grid-area: header;*/
@@ -82,14 +82,19 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
-
+h3{
+    color: rgb(240,50,30);
+    font-size: 20px;
+    text-align: center;
+}
 .sidebar {
-    /*background-image: linear-gradient(0deg, #20c997 0%, #6a1a21 70%);*/
+    
     width: 450px;
     height: 90vh;
     display: inline-block;
     position: relative;
     top: 0;
+    
 }   
     
 .levelsContainer{
@@ -102,33 +107,49 @@ a, .btn-link {
     flex-direction: column;
     overflow-y: scroll;
 }
-.level{
-   
-    width: 90%;
-    background: #1861ac;
-    padding: 10px;
+.levelBackBlock{
+    width: 95%;
     margin: auto;
-    border: black solid 3px;
-    border-radius: 5px;
     height: auto;
-    font-size: 60px;
+}
+.selectBlock{
+    padding: 10px;
+    border: rgb(45,64,89)  solid 3px;
+    border-radius: 5px;
+    font-size: 20px;
     color: white;
     text-align: center;
     vertical-align: middle;
     transition-duration: 1s;
+    background: rgb(34,40,49);
 }
-.level:hover{
-    border-color: orange;
-    transform: scale(1.1);
+.levelSelectBlock{
+    width: 175px;
+    height: 175px;
+
+    background-size: contain;
+    background: url("../test.png") no-repeat center;
+}
+.backBlock{
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    background: rgb(34,40,49);
+    
+}
+
+.selectBlock:hover{
+    border-color: rgb(240,50,30);
+   
 }
 .topMenu{
     top: 0px;
     left:0px;
-    height: 10vh;
+    height: 100%;
     width: 100%;
     position: static;
-    background-image: linear-gradient(270deg, #20c997 0%, #6a1a21 70%);
-    border-bottom: orange solid 5px ;
+    background: rgb(23,26,30);
+    border-bottom: rgb(240,50,30) solid 5px ;
 }
 
 
@@ -143,9 +164,14 @@ a, .btn-link {
     margin: 20px;
 }
 .sheetContainer{
+    
     height: 100%;
     width: 100%;
-   
+}
+.characterStats{
+    width: 150px;
+    height: 50px;
+    
 }
 
 ::-webkit-scrollbar{
@@ -153,17 +179,18 @@ a, .btn-link {
     
 }
 ::-webkit-scrollbar-thumb{
-    background: #2c3034;
+    background: rgb(45,64,89);
     border-radius: 15px;
     transition-duration: 1s;
 }
 ::-webkit-scrollbar-thumb:hover
 {
-    background: orange;
+    background: rgb(240,50,30);
     transform: scale(1.1);
 }
 ::-webkit-scrollbar-track{
-    background: #1e2125;
+    background: rgb(54,54,54);
     border-radius: 15px;
 }
+
 
