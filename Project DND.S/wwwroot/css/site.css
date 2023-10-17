@@ -8,16 +8,14 @@ body{
     background: rgb(23,26,30);
 }
 header{
-    /*grid-area: header;*/
     grid-column-start: 1;
     grid-column-end:  3;
 }
 aside{
-  /*  grid-area: build;*/
     padding: 10px;
 }
 main{
-   /* grid-area: main;*/
+   
     grid-column-start: 2;
     grid-column-end:  3;
     grid-row-start: 2;
@@ -79,9 +77,9 @@ a, .btn-link {
     color: white;
 }
 
-    .blazor-error-boundary::after {
-        content: "An error has occurred."
-    }
+.blazor-error-boundary::after {
+    content: "An error has occurred."
+}
 h3{
     color: rgb(240,50,30);
     font-size: 20px;
@@ -90,7 +88,7 @@ h3{
 .sidebar {
     
     width: 450px;
-    height: 90vh;
+    height: 95vh;
     display: inline-block;
     position: relative;
     top: 0;
@@ -102,6 +100,8 @@ h3{
     width: 100%;
     
     padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -121,7 +121,8 @@ h3{
     text-align: center;
     vertical-align: middle;
     transition-duration: 1s;
-    background: rgb(34,40,49);
+    background: transparent;
+    margin: 5px;
 }
 .levelSelectBlock{
     width: 175px;
@@ -156,22 +157,39 @@ h3{
 .sheetAr{
     display: inline-block;
     position: relative;
-    
-    height: 100%;
+    height: 95vh;
     width: 95%;
-    background: #6f42c1;
+    padding-bottom: 10px;
+   
     
-    margin: 20px;
+    
 }
 .sheetContainer{
-    
     height: 100%;
     width: 100%;
+    margin-left: 20px;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 250px 350px 1fr;
+    grid-template-rows: 130px 110px 120px  1fr;
 }
 .characterStats{
-    width: 150px;
-    height: 50px;
+    width: 600px;
+    height: 130px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
     
+}
+.defenceStats{
+    width: 600px;
+    height: 100px;
+    margin-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
 ::-webkit-scrollbar{
@@ -192,5 +210,154 @@ h3{
     background: rgb(54,54,54);
     border-radius: 15px;
 }
+.playerLevelBlock{
+    width: 80px;
+    height: 50px;
+    padding: 2px;
+    padding-left: 5px;
+    display: inline-block;
+}
+.XPBlock{
+    width: 80px;
+    height: 50px;
+    padding: 2px;
+    padding-left: 5px;
+    display: inline-block;
+}
+.nameBlock{
+    width: calc(100% - 200px);
+    height: 50px;
+    padding: 2px;
+    padding-left: 5px;
+    display: inline-block;
+}
+.blockValue{
+    font-size: 15px;
+    text-align: left;
+    color: white;
+}
+.blockLabel{
+    font-size: 15px;
+    text-align: left;
+    color: #5a5d5d;
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    
+}
+.smallValueBlock{
+    height: 50px;
+    width: auto;
+}
+.smallValueLabel{
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+.HPBar{
+    height: 40px;
+    width: 100px;
+    background-color: #314964;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+}
+.savingThrowGroup{
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 90%;
+    width: 50%;
+    justify-content: space-between;
+} 
+.savingThrow{
+    display: block;
+    flex: 0 1;
+    width: 50%;
+}
+.savingThrowLabel{
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+.displayedStats{
+    height: 110px;
+    width: 250px;
+    margin-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    
+}
+.displayedStatsLabel{
+    font-size: 15px;
+    text-align: left;
+    color: white;
+}
+.characterPerks{
+    width: 250px;
+    height: auto;
+    max-height: 100%;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    overflow-y: auto;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    
+}
+.perkLabel{
+    font-size: 15px;
+    text-align: left;
+    color: white;
+}
+.characterTab{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 0px;
+    position: relative;
+}
+.characterTabSelector{
+    height: 40px;
+    width: 100%;
+    border-bottom: rgb(240,50,30) solid 5px ;
+    display: flex;
+}
+.tabButton{
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 25px;
+    color: #a1a1a1;
+}
+.tabButton:hover{
+    color: rgb(240,50,30);
+    transition-duration: 0.1s;
+}
+.tabButton:not(:hover) {
+    transition-duration: 0.1s;
+}
+.tabZone{
+    height: calc(100% - 40px);
+    width: 100%;
+}
+
 
 

@@ -3,11 +3,8 @@
     
     flex-direction: column;
     display: grid;
-    grid-template-rows: 7vh 1fr;
+    grid-template-rows: 40px 1fr;
     grid-template-columns: 450px 1fr;
-   /* grid-template-areas:
-            "header" "header"
-    "build" "sheet";*/
 }
 
 main {
