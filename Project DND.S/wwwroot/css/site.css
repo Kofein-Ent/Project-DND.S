@@ -178,7 +178,7 @@ h3{
     padding-top: 10px;
     display: grid;
     grid-template-columns: 250px 350px 1fr;
-    grid-template-rows: 130px 110px 120px  1fr;
+    grid-template-rows: 130px 110px 140px  1fr;
 }
 .characterStats{
     width: 600px;
@@ -265,6 +265,7 @@ h3{
     font-size: 15px;
     text-align: center;
     color: white;
+   
 }
 .HPBar{
     height: 40px;
@@ -291,14 +292,17 @@ h3{
     width: 50%;
 }
 .displayedStats{
-    height: 110px;
+    height: calc(100% - 10px);
     width: 250px;
     margin-top: 10px;
+    margin-bottom: 10px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .characterPerks{
     width: 250px;
@@ -323,6 +327,7 @@ h3{
     text-align: left;
     color: white;
     margin-left: 5px;
+    cursor: pointer;
 }
 .statLabel:hover{
     color: rgb(240,50,30);
@@ -378,9 +383,10 @@ h3{
     width: 20px;
     height: 20px;
     display: inline-block;
-    background: url("../Dice.jpg") no-repeat center;
-    
+    background: url("../RollDiceImg.png") no-repeat center;
+    margin-right: 5px;
     background-size: cover;
+    cursor: pointer;
     
 }
 .diceRoller:hover{

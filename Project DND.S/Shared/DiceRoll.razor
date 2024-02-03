@@ -1,4 +1,4 @@
-<div class="diceRoller" href="#" >
+<div class="diceRoller" @onclick="x => aaa()">
     
     
     
@@ -6,4 +6,9 @@
 
 @code {
    [Parameter] public int Modifier { get; set; }
+
+   private void aaa()
+   {
+      
+   }
 }
