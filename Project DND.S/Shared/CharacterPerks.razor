@@ -2,10 +2,14 @@
     @for (int i = 0; i < 25; i++)
     {
         <div class="perkContainer">
-            <DiceRoll></DiceRoll>
+            <DiceRoll EventCallback="@EventCallback1" Modifier="@i" DiceNum="20"></DiceRoll>
             <div class="statLabel"> Stat @(i + 1)</div>
 
         </div>
     }
 </div>
 
+@code
+{
+    [Parameter] public EventCallback<(int,int)> EventCallback1  { get; set; }
+}

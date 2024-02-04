@@ -3,12 +3,14 @@
     
     
     <CharacterStats/>
-    <DiceRollerDisplay/>       
+    <DiceRollerDisplay @ref="_diceRollerDisplay"/>       
     <DefenceStats/>
     <DisplayedStats/>
-    <CharacterPerks/>
+    <CharacterPerks></CharacterPerks>
     <CharacterTab/>
 </div>
 @code {
-    
-}
+    //[Parameter] public EventCallback<(int,int)> EventCallback  { get; set; }
+    private DiceRollerDisplay _diceRollerDisplay ;
+
+} 

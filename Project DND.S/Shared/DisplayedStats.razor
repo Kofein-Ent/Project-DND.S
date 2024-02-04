@@ -1,22 +1,22 @@
 
 <div class="displayedStats backBlock">
     <div class="displayedStatsGroup">
-        <DiceRoll/>
+        <DiceRoll EventCallback="@EventCallback1"/>
         <div class="statLabel">Class DC : 13</div>
     </div> 
     
     <div class="displayedStatsGroup">
-            <DiceRoll/>
+            <DiceRoll  EventCallback="@EventCallback1"/>
             <div class="statLabel">Class attack bonus : +5</div>
     </div> 
     
     <div class="displayedStatsGroup">
-            <DiceRoll/>
+            <DiceRoll  EventCallback="@EventCallback1"/>
             <div class="statLabel">Initiative : +1 </div>
     </div> 
     
     <div class="displayedStatsGroup">
-            <DiceRoll/>
+            <DiceRoll  EventCallback="@EventCallback1"/>
             <div class="statLabel">Passive Perception: 12 </div>
     </div> 
         
@@ -26,5 +26,6 @@
 </div>
 
 @code {
-    
+    [Parameter] public EventCallback<(int,int)> EventCallback1  { get; set; }
+
 }

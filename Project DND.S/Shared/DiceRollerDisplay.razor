@@ -1,10 +1,16 @@
 
-<div class="diceRollerZone backBlock">
-    
-    <label>1</label>
+<div  class="diceRollerZone backBlock">
+    <label>@_modifier @_rolledValue</label>
     
 </div>
 
 @code {
-    public 
+    public int _modifier;
+    private int _rolledValue;
+   
+    public void ShowInfo((int,int) valueTuple)
+    {
+        _modifier = valueTuple.Item1;
+        _rolledValue = valueTuple.Item2;
+    }
 }

@@ -1,4 +1,5 @@
-<div class="diceRoller" @onclick="x => aaa()">
+@inherits DiceRollerDisplay
+<div class="diceRoller" @onclick="@(async() => await EventCallback.InvokeAsync((Modifier,DiceNum)))">
     
     
     
@@ -6,9 +7,13 @@
 
 @code {
    [Parameter] public int Modifier { get; set; }
+   [Parameter] public int DiceNum { get; set; }
+   [Parameter] public EventCallback<(int,int)> EventCallback  { get; set; }
+   
 
-   private void aaa()
+   private void RollDice(int modifier, int diceNum)
    {
       
    }
+
 }
